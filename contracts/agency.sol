@@ -167,8 +167,17 @@ contract BuildAgency {
     }
 
     function deletePrice(uint saleID) public payable {
-        
-
+        require(saleID < sales.length,"wrong saleID value");
+        require(sales[saleID].newOwner == address(0), "Sale is closed");
+        for (uint i = 0; i < sales[saleID].buyers.length; i++){
+            if (sales[saleID].buyers[i] == msg.sender) {
+                uint price = sales[saleID].prices[i];
+                require(price != 0, "you price is 0");
+                payable(msg.sender).transfer(sales[saleID].prices[i]);
+                sales[saleID].prices[i] = 0;
+                break;
+            }
+        }
 
     }
 
