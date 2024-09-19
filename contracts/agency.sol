@@ -188,7 +188,7 @@ contract BuildAgency {
         }
 
     }
-    function addPrice(uint saleID, uint priceID) public payable {
+    function applyPrice(uint saleID, uint priceID) public payable {
         uint buildID = sales[saleID].buildID;
         require(saleID < sales.length,"wrong saleID value");
         require(sales[saleID].newOwner == address(0), "Sale is closed");

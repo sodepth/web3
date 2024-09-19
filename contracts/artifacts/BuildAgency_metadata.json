@@ -35,24 +35,6 @@
 						"internalType": "uint256",
 						"name": "saleID",
 						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "priceID",
-						"type": "uint256"
-					}
-				],
-				"name": "addPrice",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "saleID",
-						"type": "uint256"
 					}
 				],
 				"name": "addPrice",
@@ -71,6 +53,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "priceID",
+						"type": "uint256"
+					}
+				],
+				"name": "applyPrice",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -409,11 +409,11 @@
 	},
 	"sources": {
 		"contracts/agency.sol": {
-			"keccak256": "0x4e1f4fd6a70359e1d4255d01b3e959adda429e44c0afb125f124a2a30bfec255",
+			"keccak256": "0x94e0ae6557150150636857ebdcbe18ca4aa93e403cfe7f3db668beac3baa0119",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f558de2f7d9e732f34093afb87a0269d02a0ab0f85b448e851222e5dec13973a",
-				"dweb:/ipfs/QmPMg8b79Du73h2Aj5WRfjGnKKiJX53i3LDvQ18QejNCL5"
+				"bzz-raw://02dee0e58a7367d71dd7aca36b54919d7226fa1555d2b366179d459bd59e2452",
+				"dweb:/ipfs/QmSXMDFSeMvsR4G7GV7p3RxRWuQgZk2b69SRHCeTAeuJMT"
 			]
 		}
 	},
