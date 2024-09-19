@@ -340,11 +340,11 @@
 	},
 	"sources": {
 		"contracts/agency.sol": {
-			"keccak256": "0xd0991abc99dd56a955212d3fe4abe72671b2f431267a2d3522d89f97405a6789",
+			"keccak256": "0xd1132eb270f14bfda1e936a8762ede1b90400d4d9b6ba717271aee648b18f6ee",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://89fe957e2c421506851085cc85d5a383373f677dbea74ee884a5e3cd8a8e8f20",
-				"dweb:/ipfs/QmR5XvQpk4H7AdHvY43CQCjmZqiZJXha5Qp7wcMuygSRxb"
+				"bzz-raw://692ffbb517ce0e789e571046aa56fdcaf1b8f1fd7fbf1912cb0da662e6bd8f1c",
+				"dweb:/ipfs/QmbqqYfHqJnaoRHXMho1NS8RSvbzhn51Yc7RwdreQgYiFy"
 			]
 		}
 	},

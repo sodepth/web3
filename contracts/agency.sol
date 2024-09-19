@@ -162,6 +162,14 @@ contract BuildAgency {
         require(sales[saleID].owner != msg.sender, "self sale");
         require(sales[saleID].newOwner == address(0), "Sale is closed");
         require(sales[saleID].price <= msg.value, "wrong eth value");
+        bool stat = false;
+        for (uint i = 0; i < sales[saleID].buyers.length; i++){
+            if (sales[saleID].buyers[i] == msg.sender) {
+                stat = true;
+                break;
+            }
+        }
+        require(stat == false,"you already in prices");
         sales[saleID].buyers.push(msg.sender);
         sales[saleID].prices.push(msg.value);
     }
