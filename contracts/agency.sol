@@ -130,7 +130,6 @@ contract BuildAgency {
     
     function refuseGift(uint giftID) public {
         uint buildID = gifts[giftID].buildID;
-        require(buildings[buildID].arestSTATE == false, "build is arested");
         require(giftID < gifts.length);
         require(gifts[giftID].status == giftSTAT.ACTIVE, "Already finished");
         require(gifts[giftID]._adrTo == msg.sender, "This is gift not for you");
