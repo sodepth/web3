@@ -1,0 +1,352 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "adminADR",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "giftID",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptGift",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					}
+				],
+				"name": "addPrice",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "buildings",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "buildID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "info",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "square",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "giftSTATE",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "saleSTATE",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "arestSTATE",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "giftID",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelGift",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "buildID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_newarest",
+						"type": "bool"
+					}
+				],
+				"name": "changeAREST",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_info",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_square",
+						"type": "uint256"
+					}
+				],
+				"name": "createBuild",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "buildID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_adrTo",
+						"type": "address"
+					}
+				],
+				"name": "createGift",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "buildID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "createSale",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					}
+				],
+				"name": "deletePrice",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "giftTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "gifts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "giftID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "buildID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_adrFrom",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_adrTo",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum BuildAgency.giftSTAT",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "giftID",
+						"type": "uint256"
+					}
+				],
+				"name": "refuseGift",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "sales",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "buildID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/agency.sol": "BuildAgency"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/agency.sol": {
+			"keccak256": "0xc0e069bac9f327425d9760d8691b36c5af8e39448c683db4c4d7c729a99cf0ea",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6a9b53b560848bd320e447ed4efd12468b40119dbc55ab3e9fc12213b7302904",
+				"dweb:/ipfs/QmPe66rnJFUVjTShCfTC4fJrykgr3J3NkzAyBnoQmv4d4q"
+			]
+		}
+	},
+	"version": 1
+}

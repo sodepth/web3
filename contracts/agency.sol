@@ -63,6 +63,7 @@ contract BuildAgency {
         _;
     }
 
+
     constructor(address adminADR){
 
         // admin = msg.sender;
@@ -91,7 +92,7 @@ contract BuildAgency {
     function createGift(uint buildID, address _adrTo) public onlyOwner(buildID) defaultSTATUS(buildID){
         require(_adrTo != address(0), "wrong_address");
         require(buildID < buildings.length,"wrong buildID value");
-        require(_adrTo != msg.sender, "adr == you adr!");
+        require(_adrTo != msg.sender, "self gift");
         gifts.push(Gift(gifts.length, buildID, msg.sender,_adrTo, giftTime+ block.timestamp, giftSTAT.ACTIVE));
         buildings[buildID].giftSTATE = true;
     }
@@ -153,5 +154,22 @@ contract BuildAgency {
         buildings[buildID].saleSTATE = true;
     }
 
+
+    function addPrice(uint saleID) public payable {
+        uint buildID = sales[saleID].buildID;
+        require(buildings[buildID].arestSTATE == false, "estate arested");
+        require(saleID < sales.length,"wrong saleID value");
+        require(sales[saleID].owner != msg.sender, "self sale");
+        require(sales[saleID].newOwner == address(0), "Sale is closed");
+        require(sales[saleID].price <= msg.value, "wrong eth value");
+        sales[saleID].buyers.push(msg.sender);
+        sales[saleID].prices.push(msg.value);
+    }
+
+    function deletePrice(uint saleID) public payable {
+        
+
+
+    }
 
 }
