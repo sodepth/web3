@@ -88,7 +88,7 @@ contract BuildAgency {
 
     //gift
 
-    function createGift(uint buildID, address _adrTo) public defaultSTATUS(buildID) onlyOwner(buildID){
+    function createGift(uint buildID, address _adrTo) public onlyOwner(buildID) defaultSTATUS(buildID){
         require(_adrTo != address(0), "wrong_address");
         require(buildID < buildings.length,"wrong buildID value");
         require(_adrTo != msg.sender, "adr == you adr!");
@@ -144,7 +144,7 @@ contract BuildAgency {
 
     //trade
 
-    function createSale(uint buildID, uint _price) public defaultSTATUS(buildID) onlyOwner(buildID){
+    function createSale(uint buildID, uint _price) public onlyOwner(buildID) defaultSTATUS(buildID){
         require(buildID < buildings.length,"wrong buildID value");
         require(_price > 10**9 wei);
         address[] memory _buyers;
