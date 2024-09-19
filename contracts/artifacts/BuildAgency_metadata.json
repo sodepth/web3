@@ -35,6 +35,24 @@
 						"internalType": "uint256",
 						"name": "saleID",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "priceID",
+						"type": "uint256"
+					}
+				],
+				"name": "addPrice",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
 					}
 				],
 				"name": "addPrice",
@@ -340,11 +358,11 @@
 	},
 	"sources": {
 		"contracts/agency.sol": {
-			"keccak256": "0xd1132eb270f14bfda1e936a8762ede1b90400d4d9b6ba717271aee648b18f6ee",
+			"keccak256": "0x1644bc183ccef2132e81d00a96e2d4d6632b88777b6858193599e75d6f1eee30",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://692ffbb517ce0e789e571046aa56fdcaf1b8f1fd7fbf1912cb0da662e6bd8f1c",
-				"dweb:/ipfs/QmbqqYfHqJnaoRHXMho1NS8RSvbzhn51Yc7RwdreQgYiFy"
+				"bzz-raw://5e149548a6e8bb915e7f97ea3927463fcff246bf32d67a14ccfa331046d54d34",
+				"dweb:/ipfs/QmZWAeArtnvmCJW5WqyruwpJUV66mLSdaf8M65zLHWkMDC"
 			]
 		}
 	},

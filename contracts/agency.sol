@@ -188,5 +188,22 @@ contract BuildAgency {
         }
 
     }
-
+    function addPrice(uint saleID, uint priceID) public payable {
+        uint buildID = sales[saleID].buildID;
+        require(saleID < sales.length,"wrong saleID value");
+        require(sales[saleID].newOwner == address(0), "Sale is closed");
+        require(sales[saleID].owner == msg.sender, "Not you sale");
+        require(buildings[buildID].arestSTATE == false, "build is arested");
+        for (uint i = 0; i < sales[saleID].buyers.length; i++){
+            if (i != priceID) {
+                payable(sales[saleID].buyers[i]).transfer(sales[saleID].prices[i]);
+            }
+            else{
+                payable(sales[saleID].owner).transfer(sales[saleID].prices[priceID]);
+                sales[saleID].newOwner = sales[saleID].buyers[priceID];
+                buildings[buildID].owner = sales[saleID].buyers[priceID];
+            }
+        }
+        buildings[buildID].saleSTATE = false;
+    }
 }
