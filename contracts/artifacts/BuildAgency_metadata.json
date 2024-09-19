@@ -139,6 +139,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					}
+				],
+				"name": "canelSale",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "buildID",
 						"type": "uint256"
 					},
@@ -223,6 +236,44 @@
 				"name": "deletePrice",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					}
+				],
+				"name": "getBuyers",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "saleID",
+						"type": "uint256"
+					}
+				],
+				"name": "getPrices",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -358,11 +409,11 @@
 	},
 	"sources": {
 		"contracts/agency.sol": {
-			"keccak256": "0x1644bc183ccef2132e81d00a96e2d4d6632b88777b6858193599e75d6f1eee30",
+			"keccak256": "0x4e1f4fd6a70359e1d4255d01b3e959adda429e44c0afb125f124a2a30bfec255",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5e149548a6e8bb915e7f97ea3927463fcff246bf32d67a14ccfa331046d54d34",
-				"dweb:/ipfs/QmZWAeArtnvmCJW5WqyruwpJUV66mLSdaf8M65zLHWkMDC"
+				"bzz-raw://f558de2f7d9e732f34093afb87a0269d02a0ab0f85b448e851222e5dec13973a",
+				"dweb:/ipfs/QmPMg8b79Du73h2Aj5WRfjGnKKiJX53i3LDvQ18QejNCL5"
 			]
 		}
 	},

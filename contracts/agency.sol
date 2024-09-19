@@ -206,4 +206,27 @@ contract BuildAgency {
         }
         buildings[buildID].saleSTATE = false;
     }
+
+    function canelSale(uint saleID) public payable {
+        uint buildID = sales[saleID].buildID;
+        require(saleID < sales.length,"wrong saleID value");
+        require(sales[saleID].newOwner == address(0), "Sale is closed");
+        require(sales[saleID].owner == msg.sender, "Not you sale");
+        for (uint i = 0; i < sales[saleID].buyers.length; i++){
+            payable(sales[saleID].buyers[i]).transfer(sales[saleID].prices[i]);
+        }
+        sales[saleID].newOwner = msg.sender;
+        buildings[buildID].saleSTATE = false;
+    }
+
+
+    function getBuyers(uint saleID) public view returns(address[] memory){
+        return sales[saleID].buyers;
+
+    }
+
+    function getPrices(uint saleID) public view returns(uint[] memory){
+        return sales[saleID].prices;
+
+    }
 }
